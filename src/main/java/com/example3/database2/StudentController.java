@@ -14,7 +14,7 @@ public class StudentController {
     @Autowired
     private StudentRepository studentRepository;
 
-    @PostMapping("/add")
+    @PostMapping("/adddetails")
     public ResponseEntity addStudent(@RequestBody Student student) {
         studentRepository.save(student);
         return new ResponseEntity("Student saved to the database", HttpStatus.CREATED);
